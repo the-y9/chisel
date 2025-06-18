@@ -1,0 +1,16 @@
+.routine {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+}
+
+button {
+  font-size: 0.5em;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 7em;
+}
