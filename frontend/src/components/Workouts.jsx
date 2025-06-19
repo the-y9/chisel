@@ -35,10 +35,12 @@ const REST_DURATION = 5;
 
 const Workouts = ({ backgroundColor, textColor }) => {
 
-const appearance = {
+const [appearance, setAppearance] = useState({
     backgroundColor: backgroundColor,
     color: textColor
-  };
+  });
+  const [color, setColor] = useState('#fff');
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [phase, setPhase] = useState('workout'); // 'workout' or 'rest'
@@ -97,10 +99,16 @@ const handlePrev = () => {
   }
 
   const currentWorkout = workouts[currentIndex];
+  
+  const handleColorChange = (e) => {
+    setColor(e.target.value);
+    setAppearance(prev => ({ ...prev, backgroundColor: e.target.value }));
+  };
 
-  return (
+  return (<>
+
     <div className="routine" style={appearance}>
-      <h2 style= {{ marginBottom: 0 }}>{phase === 'workout' ? currentWorkout.name : 'Rest'} </h2>
+      <h2 style= {{ marginBottom: 0, textAlign: 'center' }}>{phase === 'workout' ? currentWorkout.name : 'Rest'} </h2>
       <p style= {{ marginTop: 0 }}>({currentIndex+1}/{workouts.length})</p>
       <Navigation
         onNext={handleNext}
@@ -127,6 +135,10 @@ const handlePrev = () => {
         )}
 
     </div>
+      {/* Color Picker Button */}
+        <label htmlFor="colorPicker">Customize Background:   </label>
+        <input id="colorPicker" type="color" value={color} onChange={handleColorChange} />
+    </>
   );
 };
 
