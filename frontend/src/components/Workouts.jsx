@@ -39,7 +39,7 @@ const [appearance, setAppearance] = useState({
     backgroundColor: backgroundColor,
     color: textColor
   });
-  const [color, setColor] = useState('backgroundColor');
+  const [color, setColor] = useState(backgroundColor);
 
 
   const [currentIndex, setCurrentIndex] = useState(0);
