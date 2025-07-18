@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). It is a fitness app called "Chisel".
+It includes a workout routine with a timer and navigation. Users can customize the background color of the workout routine. The app uses React.
 
 ## Available Scripts
 
