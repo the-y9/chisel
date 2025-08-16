@@ -2,12 +2,28 @@ import { useState } from "react";
 import'./WorkoutSetup.css';
 
 const defaultExercises = [
+  // Warm-up
   { name: "Boxer bounce", method: "timer", duration: 30 },
   { name: "Jog in place", method: "timer", duration: 30 },
-  { name: "Squats", method: "rep", reps: 10 },
-  { name: "Twisted Crunch", method: "rep", reps: 10 },
-  { name: "Push-ups", method: "rep", reps: 15 },
-  { name: "High plank shoulder taps", method: "rep", reps: 14 },
+
+  // Circuit Begins
+  { name: "Squats", method: "rep", reps: 10 }, // Strength (lower)
+  { name: "Twisted Crunch", method: "rep", reps: 10 }, // Core
+  { name: "Push-ups", method: "rep", reps: 15 }, // Strength (upper)
+  { name: "High plank shoulder taps", method: "rep", reps: 14 }, // Plank stability
+
+  { name: "Run in place", method: "timer", duration: 30 }, // Cardio burst
+
+  { name: "Plank saws", method: "timer", duration: 30 }, // Plank challenge
+  { name: "Plank alternating leg lifts", method: "rep", reps: 14 }, // Plank dynamic core
+  { name: "Twisted Crunch", method: "rep", reps: 10 }, // Core
+
+  { name: "Flutter kicks", method: "timer", duration: 30 }, // Core endurance
+  { name: "Reverse crunch", method: "rep", reps: 10 }, // Core
+  { name: "Plank", method: "timer", duration: 45 }, // Core hold
+
+  // Cool-down
+  { name: "Cobra pose", method: "timer", duration: 30 }, // Stretch
 ];
 
 const WorkoutSetup = ({ onStart, backgroundColor, textColor }) => {

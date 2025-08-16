@@ -32,11 +32,9 @@ const WORK_DURATION = 30;
 const REST_DURATION = 5;
 
 const Workouts = ({ backgroundColor, textColor, customPlan, restDuration }) => {
-  const workouts = customPlan && customPlan.length > 0 ? customPlan : workouts;
-  const REST_DURATION = restDuration || REST_DURATION;
-  console.log(workouts);
+  const workouts = customPlan 
+  const REST_DURATION = restDuration 
   
-
   const [appearance, setAppearance] = useState({
     backgroundColor: backgroundColor,
     color: textColor,
